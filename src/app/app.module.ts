@@ -18,6 +18,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { SelectExamComponent } from './select-exam/select-exam.component';
 import { StartExamComponent } from './start-exam/start-exam.component';
 import { QuestionPaperComponent } from './question-paper/question-paper.component';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { ResponseResetpasswordComponent } from './response-resetpassword/response-resetpassword.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { QuestionPaperComponent } from './question-paper/question-paper.componen
     AboutUsComponent,
     SelectExamComponent,
     StartExamComponent,
-    QuestionPaperComponent
+    QuestionPaperComponent,
+    HttpClientModule,
+    FormsModule,
+    NgxCaptchaModule,
+    ResponseResetpasswordComponent
   ],
   imports: [
     BrowserModule,

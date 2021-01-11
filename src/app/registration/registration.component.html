@@ -3,13 +3,22 @@
 <p> Please provide us with the following details:</p>
 <form (ngSubmit)="register()">
 
-    Full Name: <input type="text" name="t1" [(ngModel)]=customer.name /><br/>
+    Full Name: <input type="text" name="t1" [(ngModel)]=student.fullName /><br />
 
-    Select your data of birth: <input type="date" name="t2" [(ngModel)]=customer.dateOfBirth /><br/>
+    Email: <input type="email" name="t2" [(ngModel)]=student.email /><br />
 
-    Enter your email address: <input type="email" name="t3" [(ngModel)]=customer.email /><br/>
+    Mobile : <input type="number" name="t3" [(ngModel)]=student.mobile /><br />
 
-    Enter your password: <input type="password" name="t4" [(ngModel)]=customer.password /><br/>
+    City : <input type="text" name="t4" [(ngModel)]=student.city /><br />
+
+    Date Of Birth: <input type="date" name="t5" [(ngModel)]=student.dateOfBirth /><br />
+
+    State: <input type="text" name="t6" [(ngModel)]=student.state /><br />
+
+    Qualification: <input type="text" name="t7" [(ngModel)]=student.qualification /><br />
+
+    Year of Completion: <input type="number" name="t8" [(ngModel)]=student.yearOfCompletion /><br />
+
 
     <button type="submit">Register</button>
 

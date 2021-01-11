@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-
+  userLogin= function () {
+    this.router.navigateByUrl('/userLogin');
+};
+userRegister= function () {
+  this.router.navigateByUrl('/register');
+};
+report= function () {
+  this.router.navigateByUrl('/');
+};
+newExam= function () {
+  this.router.navigateByUrl('/startexam');
+};
 }

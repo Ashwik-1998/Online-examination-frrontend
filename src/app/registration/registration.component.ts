@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../Student';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  student: Student = new Student();
 
-  ngOnInit() {
+  constructor(private studentService: StudentService) { }
+
+
+  ngOnInit(): void {
+
+  }
+
+  register(){
+    alert(JSON.stringify(this.student));
+
+    this.studentService.register(this.student).subscribe(response => {
+      alert(JSON.stringify(response));
+    })
   }
 
 }
