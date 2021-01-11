@@ -1,1 +1,16 @@
-<p>registration works!</p>
+<p>REGISTER FOR ONLINE EXAM SYSTEM PORTAL</p>
+
+<p> Please provide us with the following details:</p>
+<form (ngSubmit)="register()">
+
+    Full Name: <input type="text" name="t1" [(ngModel)]=customer.name /><br/>
+
+    Select your data of birth: <input type="date" name="t2" [(ngModel)]=customer.dateOfBirth /><br/>
+
+    Enter your email address: <input type="email" name="t3" [(ngModel)]=customer.email /><br/>
+
+    Enter your password: <input type="password" name="t4" [(ngModel)]=customer.password /><br/>
+
+    <button type="submit">Register</button>
+
+</form>
