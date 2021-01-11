@@ -41,8 +41,11 @@ export class UserLoginComponent implements OnInit {
   }
 
   }
+
+  
 export class Login{
 
   email:string;
   password: string;
 }
+

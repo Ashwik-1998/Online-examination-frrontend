@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { AdminLogin } from './admin-login/admin-login.component';
 import { Student } from './Student';
 import { Login } from './user-login/user-login.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +21,7 @@ export class StudentService {
 
   login( login :Login) 
   {
-    let url = "http://localhost:8181/userlogin";
+    let url = "http://localhost:8081/userlogin";
     return this.http.post(url,login);
   }
 
@@ -38,4 +40,5 @@ export class StudentService {
     let url="http://localhost:8181/changepassword";
     return this.http.post(url,body)
   }
+   
 }
