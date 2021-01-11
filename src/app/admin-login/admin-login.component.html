@@ -1,1 +1,8 @@
 <p>admin-login works!</p>
+<p>{{ message }}</p>
+<form (ngSubmit)="loginCheck()">
+    Enter email :<input type="text" name="t1" [(ngModel)]=login.email><br>
+    enter password:<input type="password" name="t2" [(ngModel)]=login.password><br>
+    <button type="submit">Login</button>
+    
+    </form>
