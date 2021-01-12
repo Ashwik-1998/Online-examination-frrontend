@@ -15,7 +15,7 @@ export class StudentService {
   constructor(private http: HttpClient) { }
 
   register(student: Student) : Observable<any> {
-    let url = "http://localhost:8181/register";
+    let url = "http://localhost:8081/register";
     return this.http.post(url,student);
   }
 
@@ -27,17 +27,17 @@ export class StudentService {
 
   adminlogin( login :AdminLogin) 
   {
-    let url = "http://localhost:8181/adminlogin";
+    let url = "http://localhost:8081/adminlogin";
     return this.http.post(url,login);
   }
 
   forgotPassword(body):Observable<any>{
-    let url="http://localhost:8181/changepassword";
+    let url="http://localhost:8081/changepassword";
     return this.http.post(url,body)
   
   }
   requestReset(body):Observable<any>{
-    let url="http://localhost:8181/changepassword";
+    let url="http://localhost:8081/changepassword";
     return this.http.post(url,body)
   }
    

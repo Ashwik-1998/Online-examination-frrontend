@@ -13,15 +13,15 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   userLogin= function () {
-    this.router.navigateByUrl('/userLogin');
-};
+    this.router.navigateByUrl('/user-login');
+}
 userRegister= function () {
   this.router.navigateByUrl('/register');
-};
+}
 report= function () {
   this.router.navigateByUrl('/');
-};
+}
 newExam= function () {
   this.router.navigateByUrl('/startexam');
-};
+}
 }
