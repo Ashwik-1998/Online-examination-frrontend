@@ -1,1 +1,11 @@
-<p>add-question works!</p>
+<form (ngSubmit)="addCheck()">
+    Subject Name:<input type="text" name="subject" [(ngModel)]="addQuestion.subjectName"><br>
+    Test Level:<input type="number" [(ngModel)]="addQuestion.testLevel"><br>
+    Enter Question to be added : <input type="text" name="q" [(ngModel)]="addQuestion.questionDesc"><br>
+    1.<input type="text" name="o1" [(ngModel)]="addQuestion.option1"><br>
+    2.<input type="text" name="o2" [(ngModel)]="addQuestion.option2"><br>
+    3.<input type="text" name="o3" [(ngModel)]="addQuestion.option3"><br>
+    4.<input type="text" name="o4" [(ngModel)]="addQuestion.option4"><br>
+    Correct Option :<input type="text" name="c" [(ngModel)]="addQuestion.correctAnswer"><br>
+    <button type="submit">Add</button>
+   </form>

@@ -5,6 +5,7 @@ import { AdminLogin } from './admin-login/admin-login.component';
 import { Student } from './Student';
 import { Login } from './user-login/user-login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Question } from './add-question/add-question.component';
 
 
 @Injectable({
@@ -40,5 +41,12 @@ export class StudentService {
     let url="http://localhost:8081/changepassword";
     return this.http.post(url,body)
   }
+
+
+  addquestion(question : Question) {
+
+    let url="http://localhost:8081/addQuestion";
+      return this.http.post(url, question);
+    }
    
 }
