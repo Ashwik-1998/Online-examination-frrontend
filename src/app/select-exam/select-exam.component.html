@@ -1,10 +1,10 @@
 <h3> Select Exam</h3>
 
-<input  type="button" value="JAVA" [(ngModel)] = "Java.value" (click)= "selectExam($event.target.value)">
-<!--<app-start-exam [sbjName]="subjectName"></app-start-exam>-->
+<!--<input  type="button" value="JAVA" [(ngModel)] = "Java.value" (click)= "selectExam($event.target.value)">
+<app-start-exam [sbjName]="subjectName"></app-start-exam>
 
 
-<input  type="button" value="SQL" [(ngModel)] = "SQL.value" (click)= "selectExam($event.target.value)">
+<input  type="button" value="SQL" [(ngModel)] = "SQL.value" (click)= "selectExam(ref.value)" #ref>
 
 <input  type="button" value="PHP" [(ngModel)] = "PHP.value" (click)= "selectExam($event.target.value)"> 
 
@@ -13,9 +13,12 @@
 <input  type="button" value="Python" [(ngModel)] = "Python.value" (click)= "selectExam($event.target.value)">
 
 <input  type="button" value="Csharp" [(ngModel)] = "Csharp.value" (click)= "selectExam($event.target.value)">
-
+-->
+<input type="button" value="JAVA" (click)="selectExam(ref.value)" #ref>
+<input type="button" value="SQL" (click)="selectExam(ref1.value)" #ref1>
+<input type="button" value="PYTHON" (click)="selectExam(ref2.value)" #ref2>
+<input type="button" value="PHP" (click)="selectExam(ref3.value)" #ref3>
+<input type="button" value="c" (click)="selectExam(ref4.value)" #ref4>
+<input type="button" value="csharp" (click)="selectExam(ref5.value)" #ref5>
 
 <app-question-paper [questionsList]="questions"></app-question-paper>
-
-
-

@@ -52,7 +52,7 @@ export class StudentService {
     }
 
     getQuestions(subjectName: string) : Observable<IQuestion[]>{
-      let url="http://localhost:8081/startexam?subjectName="+subjectName+"";
+      let url="http://localhost:8081/startexam?userId=4&subjectName="+subjectName;
       return this.http.get<IQuestion[]>(url);
     }
 
