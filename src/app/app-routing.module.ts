@@ -9,6 +9,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SelectExamComponent } from './select-exam/select-exam.component';
 import { StartExamComponent } from './start-exam/start-exam.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { ViewReportComponent } from './view-report/view-report.component';
 
 const routes: Routes = [
 
@@ -19,8 +20,9 @@ const routes: Routes = [
   {path:'add-question',component:AddQuestionComponent},
   {path:'selectexam',component: SelectExamComponent},
   {path:'startexam',component: StartExamComponent},
-  {path:'questionpaper',component: QuestionPaperComponent}
-  {path:'admin-area',component:AdminAreaComponent}
+  {path:'questionpaper',component: QuestionPaperComponent},
+  {path:'admin-area',component:AdminAreaComponent},
+  {path:'viewreport',component:ViewReportComponent}
 ];
 
 @NgModule({

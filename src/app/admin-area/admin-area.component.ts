@@ -22,7 +22,7 @@ export class AdminAreaComponent implements OnInit {
   }
 
   viewReport=function(){
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/viewreport');
   }
   addQuestionFile=function(){
     this.router.navigateByUrl('/add-question-file');
