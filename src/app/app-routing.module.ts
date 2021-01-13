@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HomeComponent } from './home/home.component';
+import { QuestionPaperComponent } from './question-paper/question-paper.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SelectExamComponent } from './select-exam/select-exam.component';
+import { StartExamComponent } from './start-exam/start-exam.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 
 const routes: Routes = [
@@ -12,7 +15,10 @@ const routes: Routes = [
   {path:'admin-login',component:AdminLoginComponent},
   {path:'register',component:RegistrationComponent},
   {path:'home',component:HomeComponent},
-  {path:'add-question',component:AddQuestionComponent}
+  {path:'add-question',component:AddQuestionComponent},
+  {path:'selectexam',component: SelectExamComponent},
+  {path:'startexam',component: StartExamComponent},
+  {path:'questionpaper',component: QuestionPaperComponent}
 
 ];
 

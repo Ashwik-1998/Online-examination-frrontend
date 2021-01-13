@@ -1,1 +1,7 @@
-<p>question-paper works!</p>
+
+<!-- <input type="button" value="view questions" (click)="listOfQuestions()"> -->
+
+
+<div *ngFor = "let question of questionsList">
+<h2>{{question.questionDesc}}</h2>
+</div>

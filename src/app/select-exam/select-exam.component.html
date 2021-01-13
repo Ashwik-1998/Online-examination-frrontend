@@ -1,1 +1,17 @@
-<p>select-exam works!</p>
+<h3> Select Exam</h3>
+
+<input type="button" value="JAVA" (click)= "selectExam(this.value)">
+<!--<app-start-exam [sbjName]="subjectName"></app-start-exam>-->
+
+<input type="button" value="SQL" (click)= "selectExam(this.value)">
+<input type="button" value="Python" (click)= "selectExam(this.value)">
+<input type="button" value="PHP" (click)= "selectExam(this.value)">
+<input type="button" value="C/C++" (click)= "selectExam(this.value)">
+<input type="button" value="C#/.net" (click)= "selectExam(this.value)">
+
+
+
+<app-question-paper [questionsList]="questions"></app-question-paper>
+
+
+
