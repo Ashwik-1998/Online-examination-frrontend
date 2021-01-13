@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class StartExamComponent {
 
   //public questions = [];
+   
 
   constructor(private router: Router) {
   }

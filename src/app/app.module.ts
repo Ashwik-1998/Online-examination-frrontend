@@ -12,7 +12,7 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { RemoveQuestionComponent } from './remove-question/remove-question.component';
 import { GenerateReportComponent } from './generate-report/generate-report.component';
 import { ViewReportComponent } from './view-report/view-report.component';
-//import { SearchStudentComponent } from './search-student/search-student.component';
+import { SearchStudentComponent } from './search-student/search-student.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SelectExamComponent } from './select-exam/select-exam.component';
@@ -37,7 +37,7 @@ import { DisplayStudentComponent } from './display-student/display-student.compo
     RemoveQuestionComponent,
     GenerateReportComponent,
     ViewReportComponent,
-   // SearchStudentComponent,
+   SearchStudentComponent,
     HomeComponent,
     AboutUsComponent,
     SelectExamComponent,
@@ -45,7 +45,7 @@ import { DisplayStudentComponent } from './display-student/display-student.compo
     QuestionPaperComponent,
     AdminAreaComponent,
     DisplayStudentComponent
-   // ResponseResetpasswordComponent
+   //ResponseResetpasswordComponent
   ],
   imports: [
     BrowserModule,

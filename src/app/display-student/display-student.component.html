@@ -1,1 +1,29 @@
 <p>display-student works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Date of Birth</th>  
+            <th>State</th>
+            <th>Qualification</th>
+            <th>Year Of Completion</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let students of student">
+            <td><span>{{students.fullName}}</span></td>
+            <td><span>{{students.email}}</span></td>
+            <td><span>{{students. mobile}}</span></td>
+            <td><span>{{reports.city}}</span></td>
+            <td><span>{{reports.dateOfBirth}}</span></td>
+            <td><span>{{reports.state}}</span></td>
+            <td><span>{{reports.qualification}</span></td>
+            <td><span>{{reports.yearOfCompletion}</span></td>
+            
+        </tr>
+    </tbody>

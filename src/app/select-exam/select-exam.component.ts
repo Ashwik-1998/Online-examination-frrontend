@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { Question } from '../add-question/add-question.component';
 import { IQuestion } from '../Question';
 import { StudentService } from '../student.service';
 
@@ -25,12 +24,12 @@ export class SelectExamComponent implements OnInit {
     alert(subjName);
     this.subjectName = subjName;
     this.questionDisplay();
-    this.router.navigateByUrl('/startexam');
+    //this.router.navigateByUrl('/startexam');
 }
 
 
  questionDisplay (){
-     this.studentService.getQuestions("SQL")
+     this.studentService.getQuestions("JAVA")
      .subscribe(data => {
        console.log(data);
       this.questions = data

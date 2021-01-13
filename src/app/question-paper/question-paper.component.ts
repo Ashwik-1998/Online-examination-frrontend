@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class QuestionPaperComponent implements OnInit {
 
   @Input() public questionsList = [];
-
+  p:number=1;
   constructor() { }
 
   ngOnInit() {

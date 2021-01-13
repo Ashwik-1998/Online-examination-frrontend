@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Question } from './add-question/add-question.component';
 import { IQuestion } from './Question';
 import { TestReport } from './view-report/view-report.component';
+import { GetStudents } from './GetStudents';
 
 @Injectable({
   providedIn: 'root'
@@ -51,13 +52,18 @@ export class StudentService {
     }
 
     getQuestions(subjectName: string) : Observable<IQuestion[]>{
-      let url="http://localhost:8081/startexam?subjectName="+subjectName;
+      let url="http://localhost:8081/startexam?subjectName="+subjectName+"";
       return this.http.get<IQuestion[]>(url);
     }
 
     viewReports(){
       let url="http://localhost:8081/viewReports";
       return this.http.get<TestReport>(url);
+    }
+
+    fetchStudents(getstudents:GetStudents) : Observable<any>{
+      let url="http://localhost:8081/searchstudent";
+      return this.http.post(url,getstudents);
     }
    
 }
