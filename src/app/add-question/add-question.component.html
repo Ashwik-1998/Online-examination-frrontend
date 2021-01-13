@@ -1,11 +1,12 @@
-<form (ngSubmit)="addCheck()">
-    Subject Name:<input type="text" name="subject" [(ngModel)]="addQuestion.subjectName"><br>
-    Test Level:<input type="number" [(ngModel)]="addQuestion.testLevel"><br>
-    Enter Question to be added : <input type="text" name="q" [(ngModel)]="addQuestion.questionDesc"><br>
-    1.<input type="text" name="o1" [(ngModel)]="addQuestion.option1"><br>
-    2.<input type="text" name="o2" [(ngModel)]="addQuestion.option2"><br>
-    3.<input type="text" name="o3" [(ngModel)]="addQuestion.option3"><br>
-    4.<input type="text" name="o4" [(ngModel)]="addQuestion.option4"><br>
-    Correct Option :<input type="text" name="c" [(ngModel)]="addQuestion.correctAnswer"><br>
+<form (ngSubmit)="saveQuestion()">
+    Subject Name:<input type="text"  [(ngModel)]="question.subjectName" name="subject"><br>
+    Test Level:<input type="number"  [(ngModel)]="question.testLevel" name="test"><br>
+    Enter Question to be added : <input type="text"  [(ngModel)]="question.questionDesc" name="question"><br>
+    1.<input type="text" name="option1" [(ngModel)]="question.option1"><br>
+    2.<input type="text" name="option2" [(ngModel)]="question.option2"><br>
+    3.<input type="text" name="option3" [(ngModel)]="question.option3"><br>
+    4.<input type="text" name="option4" [(ngModel)]="question.option4"><br>
+    Correct Option :<input type="text" name="correct" [(ngModel)]="question.correctAnswer"><br>
     <button type="submit">Add</button>
+    
    </form>

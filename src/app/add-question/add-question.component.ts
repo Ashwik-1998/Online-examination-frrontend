@@ -9,20 +9,34 @@ import { StudentService } from '../student.service';
 })
 export class AddQuestionComponent implements OnInit {
 
-  constructor(private studentService : StudentService) { }
-
   question : Question = new Question();
+
+  constructor(private studentService : StudentService , private router : Router ) { }
+
+ 
   ngOnInit() {
   }
 
-  addCheck(): void {
+  /*saveQuestion(): void {
    this.studentService.addquestion(this.question)
    .subscribe(data =>
     {
       alert("question added !");
     });
 
+  };*/
+  saveQuestion()
+  {
+    this.studentService.addquestion(this.question).subscribe(data =>{
+      console.log(data);
+      console.log("question added successfully");
+    });
   };
+
+  onSubmit()
+  {
+    console.log(this.question);
+  }
     
 
 }

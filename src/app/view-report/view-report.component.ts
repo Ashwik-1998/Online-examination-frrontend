@@ -1,4 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../student.service';
+
+
+export class TestReport{
+  constructor(
+  //  public reportId:any,
+  //  public score:number,
+  //  public testLevel:number,
+  //  public testSubjectName:string,
+  //  public dateAndTime:any,
+  //  public registeredUser:any
+  ){
+  }
+}
 
 @Component({
   selector: 'app-view-report',
@@ -7,9 +21,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewReportComponent implements OnInit {
 
-  constructor() { }
+  testReport : TestReport;
+  subject : any;
+  p:number=1;
+  constructor(private studentService: StudentService) { }
 
-  ngOnInit() {
+  ngOnInit():void {
+    this.studentService.viewReports().subscribe
+    (
+      (response)=>
+      {
+        this.testReport= response;
+       // console.log(this.testReport)
+      },
+      (error)=>
+      {
+        console.log("Error Occured"+error);
+      }
+    );
   }
+  
+
+
+  
+ 
+    
+  
 
 }

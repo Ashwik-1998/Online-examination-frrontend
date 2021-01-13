@@ -1,1 +1,33 @@
-<p>view-report works!</p>
+<div>
+    
+    <h2>Reports</h2>
+    <p>Generated Reports of the users</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Report Id</th>
+                <th>Score</th>
+                <th>Test Level</th>
+                <th>test Subject name</th>
+                <th>date and time</th>  
+                <th>name</th>
+                <th>user Id</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let reports of testReport | paginate:{itemsPerPage:10,currentPage:p};">
+                <td><span>{{reports.reportId}}</span></td>
+                <td><span>{{reports.score}}</span></td>
+                <td><span>{{reports.testLevel}}</span></td>
+                <td><span>{{reports.testSubjectName}}</span></td>
+                <td><span>{{reports.dateAndTime}}</span></td>
+                <td><span>{{reports.registeredUser["fullName"]}}</span></td>
+                <td><span>{{reports.registeredUser["userId"]}}</span></td>
+                
+            </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </table>
+</div>

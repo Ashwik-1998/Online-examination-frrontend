@@ -21,8 +21,10 @@ import { QuestionPaperComponent } from './question-paper/question-paper.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentService } from './student.service';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
 //import { ResponseResetpasswordComponent } from './response-resetpassword/response-resetpassword.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { DisplayStudentComponent } from './display-student/display-student.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { StudentService } from './student.service';
     AboutUsComponent,
     SelectExamComponent,
     StartExamComponent,
-    QuestionPaperComponent
+    QuestionPaperComponent,
+    AdminAreaComponent,
+    DisplayStudentComponent
    // ResponseResetpasswordComponent
   ],
   imports: [
@@ -48,7 +52,8 @@ import { StudentService } from './student.service';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

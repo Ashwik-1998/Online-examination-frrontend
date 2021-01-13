@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddQuestionComponent } from './add-question/add-question.component';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HomeComponent } from './home/home.component';
 import { QuestionPaperComponent } from './question-paper/question-paper.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
   {path:'selectexam',component: SelectExamComponent},
   {path:'startexam',component: StartExamComponent},
   {path:'questionpaper',component: QuestionPaperComponent}
-
+  {path:'admin-area',component:AdminAreaComponent}
 ];
 
 @NgModule({
