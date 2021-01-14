@@ -11,19 +11,20 @@ import { Router } from '@angular/router';
   templateUrl: './start-exam.component.html',
   styleUrls: ['./start-exam.component.css']
 })
-export class StartExamComponent {
+export class StartExamComponent implements OnInit {
 
-  //public questions = [];
-   
+
+  userId : string;
 
   constructor(private router: Router) {
   }
 
-  // questionDisplay (){
-  //    this.studentService.getQuestions(this.sbjName)
-  //    .subscribe(data => this.questions = data);
-  //  }
+  ngOnInit() {
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
+  }
 
+ 
   startExam(){
   this.router.navigateByUrl('/questionpaper');
   }

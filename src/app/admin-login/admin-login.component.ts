@@ -11,19 +11,25 @@ import { Login } from '../user-login/user-login.component';
 export class AdminLoginComponent implements OnInit {
  message : string;
  login : Login = new Login();
- response : any;
 
 
   constructor(private studentService  :  StudentService, private router :Router) { }
 
   loginCheck()
   {
-    alert(JSON.stringify(this.login));
-    this.studentService.login(this.login).subscribe(response =>{
-      alert(JSON.stringify(response));
+    console.log(this.login);
+    this.studentService.login(this.login).subscribe((response:any) =>{
+      console.log(response);
 
-      
+      if(response.status == "SUCCESS"){
+        let userId = response.userId;
+        sessionStorage.setItem('userId', String(userId));
+        this.router.navigate(['selectexam']);
 
+      }
+
+      else
+      this.message = response.message;
     })
   }
 

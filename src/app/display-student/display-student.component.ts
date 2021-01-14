@@ -11,9 +11,12 @@ import { StudentService } from '../student.service';
 export class DisplayStudentComponent implements OnInit {
    getstudents : GetStudents
    student : Student
+   userId : string;
   constructor(private studentService:StudentService) { }
 
   ngOnInit() {
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
   }
 
    studentDisplay(){

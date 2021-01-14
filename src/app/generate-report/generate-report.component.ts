@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerateReportComponent implements OnInit {
 
+  userId : string;
+
   constructor() { }
 
   ngOnInit() {
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
   }
 
 }

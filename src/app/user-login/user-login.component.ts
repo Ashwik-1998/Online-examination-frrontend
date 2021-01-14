@@ -7,42 +7,36 @@ import { StudentService } from '../student.service';
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css']
 })
-export class UserLoginComponent implements OnInit {
+export class UserLoginComponent  {
 
   login: Login = new Login();
- // message  :string;
-  response: any;
+  message  :string;
+  
   constructor(private studentService  :  StudentService, private router :Router) { }
 
-  ngOnInit() {
-  }
-
- 
+  
 
   loginCheck()
   {
-    alert(JSON.stringify(this.login));
-    this.studentService.login(this.login).subscribe(response =>{
-      alert(JSON.stringify(response));
+    console.log(this.login);
+    this.studentService.login(this.login).subscribe((response:any) =>{
+      console.log(response);
 
-      /*if(this.response.status == 'SUCCESS')
-      {
-        let userId = this.response.userId;
-        let fullName = this.response.fullName;
-         sessionStorage.setItem('userId',String(userId));
-         sessionStorage.setItem('fullName',fullName);
-         //this.router.navigate(['dashboard']);     
+      if(response.status == "SUCCESS"){
+        let userId = response.userId;
+        sessionStorage.setItem('userId', String(userId));
+        this.router.navigate(['selectexam']);
+
       }
-      else{
-        this.message = this.response.message;
-      }*/
+
+      else
+      this.message = response.message;
     })
-  
-  }
 
   }
 
-  
+  }
+
 export class Login{
 
   email:string;

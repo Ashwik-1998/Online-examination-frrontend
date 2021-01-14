@@ -10,11 +10,14 @@ import { StudentService } from '../student.service';
 export class AddQuestionComponent implements OnInit {
 
   question : Question = new Question();
+  userId : string;
 
   constructor(private studentService : StudentService , private router : Router ) { }
 
  
   ngOnInit() {
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
   }
 
   /*saveQuestion(): void {

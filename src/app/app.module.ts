@@ -25,7 +25,6 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
 //import { ResponseResetpasswordComponent } from './response-resetpassword/response-resetpassword.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DisplayStudentComponent } from './display-student/display-student.component';
-import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +44,7 @@ import { LoginComponent } from './login/login.component';
     StartExamComponent,
     QuestionPaperComponent,
     AdminAreaComponent,
-    DisplayStudentComponent,
-    LoginComponent
+    DisplayStudentComponent
    //ResponseResetpasswordComponent
   ],
   imports: [

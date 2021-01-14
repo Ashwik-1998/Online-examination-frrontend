@@ -3,7 +3,6 @@ import { Router} from '@angular/router';
 import { IQuestion } from '../Question';
 import { StudentService } from '../student.service';
 import { User } from  '../user';
-import { AuthService } from  '../auth.service';
 
 @Component({
   selector: 'app-select-exam',
@@ -17,11 +16,15 @@ export class SelectExamComponent implements OnInit {
  subjectName : string;
  public questions : IQuestion[] = [];
  isSubmitted  =  false;
+ userId: string;
  
   name: string;
-  constructor(private router: Router, private studentService: StudentService,private authService: AuthService) { }
+  constructor(private router: Router, private studentService: StudentService) { }
 
   ngOnInit() {
+
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
   }
 
 

@@ -24,9 +24,16 @@ export class ViewReportComponent implements OnInit {
   testReport : TestReport;
   subject : any;
   p:number=1;
+  userId : string;
+
   constructor(private studentService: StudentService) { }
 
   ngOnInit():void {
+
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
+
+
     this.studentService.viewReports().subscribe
     (
       (response)=>

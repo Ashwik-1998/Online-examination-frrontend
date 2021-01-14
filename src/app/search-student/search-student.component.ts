@@ -9,10 +9,11 @@ import {DisplayStudentComponent} from '../display-student/display-student.compon
   styleUrls: ['./search-student.component.css']
 })
 
-export class SearchStudentComponent {
+export class SearchStudentComponent implements OnInit {
   score = [20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
   testLevel=[1,2,3];
   testSubjectName = [ 'Java','Sql','c,c++','python','dotnet'];
+  userId : string;
 
   states: Array<any> = [
     { name: 'Gujurat', cities: ['Ahemedabad', 'Surat'] },
@@ -25,6 +26,10 @@ export class SearchStudentComponent {
   } 
 
   constructor(private router:Router) {
+  }
+  ngOnInit(): void {
+    this.userId = sessionStorage.getItem("userId");
+    console.log(this.userId);
   }
   
   display() {
