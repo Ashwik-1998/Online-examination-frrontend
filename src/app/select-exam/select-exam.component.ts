@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { IQuestion } from '../Question';
 import { StudentService } from '../student.service';
+import { User } from  '../user';
+import { AuthService } from  '../auth.service';
 
 @Component({
   selector: 'app-select-exam',
@@ -14,10 +16,10 @@ export class SelectExamComponent implements OnInit {
 
  subjectName : string;
  public questions : IQuestion[] = [];
- 
+ isSubmitted  =  false;
  
   name: string;
-  constructor(private router: Router, private studentService: StudentService) { }
+  constructor(private router: Router, private studentService: StudentService,private authService: AuthService) { }
 
   ngOnInit() {
   }

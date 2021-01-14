@@ -1,13 +1,4 @@
-export class User{
-    userId : number;
-    fullName: string;
+export interface User{
     email: string;
-    mobile: number;
-    city: string;
-    dateOfBirth: Date;
-    state: string;
-    qualification: string;
-    yearOfCompletion: number;
     password: string;
-    
 }

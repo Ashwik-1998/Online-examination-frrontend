@@ -12,21 +12,23 @@ import { SelectExamComponent } from './select-exam/select-exam.component';
 import { StartExamComponent } from './start-exam/start-exam.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { ViewReportComponent } from './view-report/view-report.component';
-
+import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
 
   {path:'user-login',component:UserLoginComponent},
   {path:'admin-login',component:AdminLoginComponent},
   {path:'register',component:RegistrationComponent},
   {path:'home',component:HomeComponent},
-  {path:'add-question',component:AddQuestionComponent},
-  {path:'selectexam',component: SelectExamComponent},
-  {path:'startexam',component: StartExamComponent},
-  {path:'questionpaper',component: QuestionPaperComponent},
-  {path:'admin-area',component:AdminAreaComponent},
-  {path:'viewreport',component:ViewReportComponent},
-  {path:'searchstudent',component:SearchStudentComponent},
-  {path:'displaystudent',component:DisplayStudentComponent}
+  {path:'add-question',component:AddQuestionComponent, canActivate: [AuthGuard]},
+  {path:'selectexam',component: SelectExamComponent, canActivate: [AuthGuard]},
+  {path:'startexam',component: StartExamComponent, canActivate: [AuthGuard]},
+  {path:'questionpaper',component: QuestionPaperComponent, canActivate: [AuthGuard]},
+  {path:'admin-area',component:AdminAreaComponent, canActivate: [AuthGuard]},
+  {path:'viewreport',component:ViewReportComponent, canActivate: [AuthGuard]},
+  {path:'searchstudent',component:SearchStudentComponent, canActivate: [AuthGuard]},
+  {path:'displaystudent',component:DisplayStudentComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

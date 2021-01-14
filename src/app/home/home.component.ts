@@ -22,6 +22,6 @@ report= function () {
   this.router.navigateByUrl('/');
 }
 newExam= function () {
-  this.router.navigateByUrl('/startexam');
+  this.router.navigateByUrl('/selectexam');
 }
 }
