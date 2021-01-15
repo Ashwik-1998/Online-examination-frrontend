@@ -1,37 +1,20 @@
-<div>
-  <label>Score:</label>
-  <select >
-    <option *ngFor ="let x of score">{{x}} </option>
-  </select>
-  <br><br>
 
-  <label>Test Level:</label>
-  <select>
-    <option *ngFor ="let y of testLevel">{{y}} </option>
-  </select>
-   <br> <br>
-  <label>Subject Name:</label>
-  <select>
-    <option *ngFor ="let z of testSubjectName">{{z}} </option>
-  </select>
-  <br> <br>
+Score : <input type="number" name="Score" id="t1" [(ngModel)]="getstudent.score">
+<br><br>
 
-               State:
-                  <select placeholder="State" (change)="changeState($event.target.value)">
-                      <option *ngFor ="let count of states">{{count.name}} </option>
-                  </select>
-              <br> <br>
-              
-           City:
-                  <select placeholder="Anycity">
-                      <option *ngFor ="let city of cities">{{city}} </option>
-                </select>
-             
-              </div>
-              <br> <br>
-  
-  <div>
-    <input type ="submit" value="Search" (click)="display()"/>
-  </div>
-  
+Test Level: <input type="number" name="Test Level" id="t2" [(ngModel)]="getstudent.testLevel"> 
+<br><br>
+
+Subject Name: <input type="text" name="Subject Name" id="t3" [(ngModel)]="getstudent.testSubjectName"> 
+<br><br>
+
+City: <input type="text" name="City" id="t4" [(ngModel)]="getstudent.city">
+<br><br>
+
+State: <input type="text" name="State" id="t5" [(ngModel)]="getstudent.state">
+<br><br>
+
+<input type="button" value="Search" (click)= "display()">
+<br><br>
+
 <router-outlet></router-outlet>

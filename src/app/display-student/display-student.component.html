@@ -15,15 +15,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor= "let students of student">
-            <td><span>{{students.fullName}}</span></td>
-            <td><span>{{students.email}}</span></td>
-            <td><span>{{students. mobile}}</span></td>
-            <td><span>{{reports.city}}</span></td>
-            <td><span>{{reports.dateOfBirth}}</span></td>
-            <td><span>{{reports.state}}</span></td>
-            <td><span>{{reports.qualification}</span></td>
-            <td><span>{{reports.yearOfCompletion}</span></td>
+        <tr *ngFor= "let stu of student | paginate:{itemsPerPage:10,currentPage:p};">
+            <td><span>{{stu.fullName}}</span></td>
+            <td><span>{{stu.email}}</span></td>
+            <td><span>{{stu. mobile}}</span></td>
+            <td><span>{{stu.city}}</span></td>
+            <td><span>{{stu.dateOfBirth}}</span></td>
+            <td><span>{{stu.state}}</span></td>
+            <td><span>{{stu.qualification}</span></td>
+            <td><span>{{stu.yearOfCompletion}</span></td>
             
         </tr>
     </tbody>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>

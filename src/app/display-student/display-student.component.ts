@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetStudents } from '../GetStudents';
-import { Student } from '../Student';
+import { FetchStudentServiceService } from '../fetch-student-service.service';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -9,31 +8,23 @@ import { StudentService } from '../student.service';
   styleUrls: ['./display-student.component.css']
 })
 export class DisplayStudentComponent implements OnInit {
-   getstudents : GetStudents
-   student : Student
+  
    userId : string;
-  constructor(private studentService:StudentService) { }
+   //stud : Student;
+   p:number=1;
+  constructor(private studentService:StudentService, private student : FetchStudentServiceService) { }
 
   ngOnInit() {
+    console.log(this.student);
     this.userId = sessionStorage.getItem("userId");
-    console.log(this.userId);
-  }
-
-   studentDisplay(){
-    this.studentService.fetchStudents(this.getstudents)
-    .subscribe(data => {
-      console.log(data);
-     this.student=data;
-    });
-   
+   // this.stud = this.student;
   }
 
 }
 
-// export class GetStudents{
-//     score:number;
-//     testLevel:number;
-//     testSubjectName:string;
-//     city:string;
-//     state:string;
+// export class Student{
+
+//   constructor(){}
 // }
+
+

@@ -28,4 +28,9 @@ export class AdminAreaComponent implements OnInit {
     this.router.navigateByUrl('/add-question-file');
   }
 
+  searchStudent(){
+
+    this.router.navigateByUrl('/searchstudent');
+  }
+
 }

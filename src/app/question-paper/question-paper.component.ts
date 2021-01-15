@@ -2,6 +2,7 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from  '@angular/router';
 import { ExamServiceService } from '../exam-service.service';
+import { ReportCardServiceService } from '../report-card-service.service';
 
 @Component({
   selector: 'app-question-paper',
@@ -15,9 +16,9 @@ export class QuestionPaperComponent implements OnInit {
   selectedOption:string;
   selectedQuesid:string;
   userId : string;
-  reportCard : ReportCard;
+  //reportCard : ReportCard;
   
-  constructor(private router: Router, private examService: ExamServiceService) { }
+  constructor(private router: Router, private examService: ExamServiceService, public reportCard : ReportCardServiceService) { }
 
   ngOnInit() {
     this.userId = sessionStorage.getItem("userId");
@@ -52,12 +53,12 @@ export class QuestionPaperComponent implements OnInit {
 
       data => {
 
-          // this.reportCard.name = data.fullName;
-          // this.reportCard.score = data.score;
-          // this.reportCard.testLevel = data.testLevel;
-          // this.reportCard.subjectName = data.testSubjectName;
+          this.reportCard.name = data.fullName;
+          this.reportCard.score = data.score;
+          this.reportCard.testLevel = data.testLevel;
+          this.reportCard.subjectName = data.testSubjectName;
 
-          this.reportCard = data;
+         // this.reportCard = data;
           console.log(this.reportCard);
 
       }
@@ -68,17 +69,5 @@ export class QuestionPaperComponent implements OnInit {
 
     this.router.navigate(['generatereport']);
   }
-
-}
-
-
-export class ReportCard{
-
-  // name : string;
-  // score : number;
-  // testLevel : number;
-  // subjectName : string;
-
-constructor(){}
 
 }

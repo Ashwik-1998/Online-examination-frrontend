@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportCardServiceService } from '../report-card-service.service';
 
 @Component({
   selector: 'app-generate-report',
@@ -9,7 +10,7 @@ export class GenerateReportComponent implements OnInit {
 
   userId : string;
 
-  constructor() { }
+  constructor(private reportCard : ReportCardServiceService) { }
 
   ngOnInit() {
     this.userId = sessionStorage.getItem("userId");

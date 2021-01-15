@@ -22,6 +22,7 @@ export class ExamServiceService {
 
 
   generateReport(userId : number) : Observable<any> {
+   // userId = 4;
     let url = "http://localhost:8081/generatereport?userId="+userId;
     return this.http.get<any>(url);
   }

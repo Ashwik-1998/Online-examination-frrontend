@@ -26,7 +26,7 @@ const routes: Routes = [
   {path:'selectexam',component: SelectExamComponent},
   {path:'startexam',component: StartExamComponent},
   {path:'questionpaper',component: QuestionPaperComponent},
-  {path:'admin-area',component:AdminAreaComponent},
+  {path:'adminarea',component:AdminAreaComponent},
   {path:'viewreport',component:ViewReportComponent},
   {path:'searchstudent',component:SearchStudentComponent},
   {path:'displaystudent',component:DisplayStudentComponent},

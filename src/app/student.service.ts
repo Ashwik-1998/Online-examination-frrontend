@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Question } from './add-question/add-question.component';
 import { IQuestion } from './Question';
 import { TestReport } from './view-report/view-report.component';
-import { GetStudents } from './GetStudents';
+import { GetStudentServiceService } from './get-student-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -28,10 +28,10 @@ export class StudentService {
     return this.http.post(url,login);
   }
 
-  adminlogin( login :AdminLogin) 
+  adminlogin( adminlogin :AdminLogin) 
   {
     let url = "http://localhost:8081/adminlogin";
-    return this.http.post(url,login);
+    return this.http.post(url,adminlogin);
   }
 
   forgotPassword(body):Observable<any>{
@@ -61,9 +61,11 @@ export class StudentService {
       return this.http.get<TestReport>(url);
     }
 
-    fetchStudents(getstudents:GetStudents) : Observable<any>{
-      let url="http://localhost:8081/searchstudent";
-      return this.http.post(url,getstudents);
+    fetchStudents(getstudents: GetStudentServiceService) : Observable<any>{
+      console.log(getstudents.testSubjectName);
+      console.log(getstudents.state);
+      let url="http://localhost:8081/searchstudent?score="+getstudents.score+"&testLevel="+getstudents.testLevel+"&testSubjectName="+getstudents.testSubjectName+"&city="+getstudents.city+"&state="+getstudents.state;
+      return this.http.get(url);
     }
    
 }

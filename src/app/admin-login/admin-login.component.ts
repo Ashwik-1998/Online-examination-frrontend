@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
-import { Login } from '../user-login/user-login.component';
 
 @Component({
   selector: 'app-admin-login',
@@ -10,21 +9,21 @@ import { Login } from '../user-login/user-login.component';
 })
 export class AdminLoginComponent implements OnInit {
  message : string;
- login : Login = new Login();
+ adminlogin : AdminLogin = new AdminLogin();
 
 
   constructor(private studentService  :  StudentService, private router :Router) { }
 
   loginCheck()
   {
-    console.log(this.login);
-    this.studentService.login(this.login).subscribe((response:any) =>{
+    console.log(this.adminlogin);
+    this.studentService.adminlogin(this.adminlogin).subscribe((response:any) =>{
       console.log(response);
 
       if(response.status == "SUCCESS"){
         let userId = response.userId;
-        sessionStorage.setItem('userId', String(userId));
-        this.router.navigate(['selectexam']);
+        sessionStorage.setItem('id', String(userId));
+        this.router.navigate(['adminarea']);
 
       }
 
@@ -41,6 +40,6 @@ export class AdminLoginComponent implements OnInit {
 
 export class AdminLogin{
 
-  email:string;
+  id: number;
   password: string;
 }
