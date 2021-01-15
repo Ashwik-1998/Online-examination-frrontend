@@ -16,6 +16,10 @@ export class QuestionPaperComponent implements OnInit {
   selectedOption:string;
   selectedQuesid:string;
   userId : string;
+
+  minutes: number = 59;
+  seconds: number = 59;
+  interval;
   //reportCard : ReportCard;
   
   constructor(private router: Router, private examService: ExamServiceService, public reportCard : ReportCardServiceService) { }
@@ -23,6 +27,25 @@ export class QuestionPaperComponent implements OnInit {
   ngOnInit() {
     this.userId = sessionStorage.getItem("userId");
     console.log(this.userId);
+
+    this.interval = setInterval(() => {
+
+      if(this.minutes>0 || this.seconds>0){
+      if(this.seconds > 0) {
+        this.seconds--;
+      } 
+      else{
+        this.minutes--;
+        this.seconds = 59;
+      }
+    }else {
+        this.submitExam();
+        //this.timeLeft = 60;
+      }
+    },1000)
+
+
+
   }
   radioChange(event:any){
     this.selectedOption=event.target.value;

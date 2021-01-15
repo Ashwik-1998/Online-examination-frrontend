@@ -1,6 +1,6 @@
 <!-- <input type="button" value="view questions" (click)="listOfQuestions()"> -->
 
-<h2>Questions</h2>
+<h2>Questions</h2>  <p>{{minutes}} : {{seconds}} Left....</p>
 <table>
     <tbody *ngFor = "let question of questionsList | paginate:{itemsPerPage:1,currentPage:p};">
         <tr>

@@ -2,6 +2,10 @@
     
     <h2>Reports</h2>
     <p>Generated Reports of the users</p>
+    <input type="text" name="searchtermsubj" placeholder="search Subject" [(ngModel)]="searchtermsubj">
+    <input type="text" name="searchtermtestlevel" placeholder="search TestLevel" [(ngModel)]="searchtermtestlevel">
+    <input type="text" name="searchtermstate" placeholder="search state" [(ngModel)]="searchtermstate">
+    <input type="text" name="searchtermcity" placeholder="search city" [(ngModel)]="searchtermcity">
     
     <table>
         <thead>
@@ -13,11 +17,12 @@
                 <th>date and time</th>  
                 <th>name</th>
                 <th>user Id</th>
-                
+                <th>State</th>
+                <th>city</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor= "let reports of testReport | paginate:{itemsPerPage:10,currentPage:p};">
+            <tr *ngFor= "let reports of testReport | search:searchtermsubj:searchtermstate:searchtermcity">
                 <td><span>{{reports.reportId}}</span></td>
                 <td><span>{{reports.score}}</span></td>
                 <td><span>{{reports.testLevel}}</span></td>
@@ -25,6 +30,9 @@
                 <td><span>{{reports.dateAndTime}}</span></td>
                 <td><span>{{reports.registeredUser["fullName"]}}</span></td>
                 <td><span>{{reports.registeredUser["userId"]}}</span></td>
+                <td><span>{{reports.registeredUser["state"]}}</span></td>
+                <td><span>{{reports.registeredUser["city"]}}</span></td>
+                
                 
             </tr>
         </tbody>

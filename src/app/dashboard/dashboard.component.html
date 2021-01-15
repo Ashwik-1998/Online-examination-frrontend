@@ -1,7 +1,30 @@
-<div id="form">
-    <h2>Online Exam System</h2>
-    <a routerLink="/home"> Student Area  </a>
-    <a routerLink="/admin-login"> Admin Area </a> 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="dm-service-banner">
+    <div class="dm-right-corner"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="dm-banner-title">
+                    <div class="front-text-box">
+                        <h1>OnlineExaminationSystem</h1>
+                    </div>
+                    <div class="back-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column" style="background-color:rgb(90, 238, 223)">
+    <a routerLink="/home">  <b style="color:rgb(78, 78, 214);"> Student Area</b> </a>
+    </div>
+    <div class="column" style="background-color:rgb(20, 214, 195)">
+    <a routerLink="/admin-login"> <b style="color: blue;"> Admin Area </b></a> 
+    </div>
 </div>
 
 <router-outlet></router-outlet>

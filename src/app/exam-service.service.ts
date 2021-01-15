@@ -28,4 +28,8 @@ export class ExamServiceService {
   }
 
 
+  deleteQuestion(subjectName : string , testLevel :number) {
+    let url = "http://localhost:8081/removequestion?subjectName="+ subjectName + "&testLevel="+ testLevel;
+      return this.http.get(url);
+    }
 }

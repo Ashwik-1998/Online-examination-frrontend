@@ -24,4 +24,11 @@ report= function () {
 newExam= function () {
   this.router.navigateByUrl('/selectexam');
 }
+
+home(){
+  this.router.navigateByUrl('/home');
+}
+aboutUs(){
+  this.router.navigateByUrl('/aboutus');
+}
 }

@@ -14,18 +14,18 @@ export class AdminAreaComponent implements OnInit {
   }
 
   addQuestion=function(){
-    this.router.navigateByUrl('/add-question');
+    this.router.navigateByUrl('/addquestion');
   }
 
   removeQuestion=function(){
-    this.router.navigateByUrl('/remove-question');
+    this.router.navigateByUrl('/removequestion');
   }
 
   viewReport=function(){
     this.router.navigateByUrl('/viewreport');
   }
   addQuestionFile=function(){
-    this.router.navigateByUrl('/add-question-file');
+    this.router.navigateByUrl('/addquestionfile');
   }
 
   searchStudent(){

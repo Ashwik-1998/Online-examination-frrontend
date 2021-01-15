@@ -1,9 +1,22 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<h3><b>User Login</b></h3>
 
-<h3>User Login</h3>
-
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
 <form (ngSubmit)="loginCheck()">
-Enter Email-id :<input type="email" name="email" [(ngModel)]=login.email><br>
-enter password:<input type="password" name="password" [(ngModel)]=login.password><br>
-<button type="submit">Login</button>
-
-</form>
+    <div class="form-group">
+       <label>Enter Email-id</label>
+       <input type="email" class="form-control"   name="email" placeholder="Email" [(ngModel)]=login.email>
+    </div>
+    <div class="form-group">
+       <label> Enter Password</label>
+       <input type="password" class="form-control"  name="password" placeholder="Password" [(ngModel)]=login.password>
+    </div>
+    <button type="submit" class="btn btn-black">Login</button>
+ </form>
+</div>
+</div>
+</div>

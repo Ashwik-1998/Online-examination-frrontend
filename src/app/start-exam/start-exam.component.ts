@@ -12,8 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./start-exam.component.css']
 })
 export class StartExamComponent implements OnInit {
-
-
+  
   userId : string;
 
   constructor(private router: Router) {
@@ -26,6 +25,7 @@ export class StartExamComponent implements OnInit {
 
  
   startExam(){
+
   this.router.navigateByUrl('/questionpaper');
   }
 
