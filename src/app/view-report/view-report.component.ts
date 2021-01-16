@@ -29,6 +29,7 @@ export class ViewReportComponent implements OnInit {
   searchtermtestlevel:string;
   searchtermstate:string;
   searchtermcity:string;
+  searchname:string;
   data=[];
 
   constructor(private studentService: StudentService) { }

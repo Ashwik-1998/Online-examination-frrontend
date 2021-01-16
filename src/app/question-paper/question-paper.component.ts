@@ -40,7 +40,7 @@ export class QuestionPaperComponent implements OnInit {
     this.studentService.getQuestions(sessionStorage.getItem('subject'), Number(sessionStorage.getItem('userId')))
     .subscribe(data => {
       console.log(data);
-     this.questionsList = data
+     this.questionsList = data.questions;
      sessionStorage.setItem('reportId', data.reportId);
     });
     console.log(this.questionsList);
