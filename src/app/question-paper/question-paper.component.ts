@@ -2,7 +2,9 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from  '@angular/router';
 import { ExamServiceService } from '../exam-service.service';
+import { IQuestion } from '../Question';
 import { ReportCardServiceService } from '../report-card-service.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-question-paper',
@@ -11,7 +13,11 @@ import { ReportCardServiceService } from '../report-card-service.service';
 })
 export class QuestionPaperComponent implements OnInit {
 
-  @Input() public questionsList = [];
+  //@Input() public questionsList = [];
+
+  public questionsList : IQuestion[] = [];
+  reportId : number;
+
   p:number=1;
   selectedOption:string;
   selectedQuesid:string;
@@ -22,11 +28,24 @@ export class QuestionPaperComponent implements OnInit {
   interval;
   //reportCard : ReportCard;
   
-  constructor(private router: Router, private examService: ExamServiceService, public reportCard : ReportCardServiceService) { }
+  constructor(private router: Router, private examService: ExamServiceService, public reportCard : ReportCardServiceService, private studentService: StudentService) { }
 
   ngOnInit() {
     this.userId = sessionStorage.getItem("userId");
     console.log(this.userId);
+
+
+    // question fetch
+    console.log(sessionStorage.getItem('subject'))
+    this.studentService.getQuestions(sessionStorage.getItem('subject'), Number(sessionStorage.getItem('userId')))
+    .subscribe(data => {
+      console.log(data);
+     this.questionsList = data
+     sessionStorage.setItem('reportId', data.reportId);
+    });
+    console.log(this.questionsList);
+
+
 
     this.interval = setInterval(() => {
 
@@ -43,8 +62,6 @@ export class QuestionPaperComponent implements OnInit {
         //this.timeLeft = 60;
       }
     },1000)
-
-
 
   }
   radioChange(event:any){

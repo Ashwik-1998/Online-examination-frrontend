@@ -51,9 +51,9 @@ export class StudentService {
       return this.http.post(url, question);
     }
 
-    getQuestions(subjectName: string) : Observable<IQuestion[]>{
-      let url="http://localhost:8081/startexam?userId=4&subjectName="+subjectName;
-      return this.http.get<IQuestion[]>(url);
+    getQuestions(subjectName: string, userId:number) : Observable<any>{
+      let url="http://localhost:8081/startexam?userId="+ userId +"&subjectName="+subjectName;
+      return this.http.get<any>(url);
     }
 
     viewReports(){

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { StudentService } from '../student.service';
 import { SelectExamComponent } from '../select-exam/select-exam.component';
 import { Router } from '@angular/router';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-start-exam',
@@ -14,8 +15,9 @@ import { Router } from '@angular/router';
 export class StartExamComponent implements OnInit {
   
   userId : string;
+  @Input() public questionsList = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private elementRef: ElementRef) {
   }
 
   ngOnInit() {
@@ -26,6 +28,8 @@ export class StartExamComponent implements OnInit {
  
   startExam(){
 
+  this.elementRef.nativeElement.remove();
+  
   this.router.navigateByUrl('/questionpaper');
   }
 

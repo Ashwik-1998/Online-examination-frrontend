@@ -22,7 +22,15 @@ report= function () {
   this.router.navigateByUrl('/');
 }
 newExam= function () {
+
+  if(sessionStorage.getItem('userId')==null){
+    alert("Please login before selecting exam");
+    this.router.navigateByUrl('/user-login');
+  }
+
+  else{
   this.router.navigateByUrl('/selectexam');
+  }
 }
 
 home(){

@@ -1,3 +1,4 @@
+import { ElementRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { IQuestion } from '../Question';
@@ -19,7 +20,7 @@ export class SelectExamComponent implements OnInit {
  userId: string;
  
   name: string;
-  constructor(private router: Router, private studentService: StudentService) { }
+  constructor(private router: Router, private studentService: StudentService, private elementRef: ElementRef) { }
 
   ngOnInit() {
 
@@ -32,18 +33,24 @@ export class SelectExamComponent implements OnInit {
     alert(subjName);
     this.subjectName = subjName;
     console.log(this.subjectName);
-    this.questionDisplay();
-    //this.router.navigateByUrl('/startexam');
+
+    sessionStorage.setItem('subject', this.subjectName);
+
+   // this.questionDisplay();
+
+    this.elementRef.nativeElement.remove();
+
+    this.router.navigateByUrl('/startexam');
 }
 
 
- questionDisplay (){
-     this.studentService.getQuestions(this.subjectName)
-     .subscribe(data => {
-       console.log(data);
-      this.questions = data
-     });
-     console.log(this.questions);
-   }
+//  questionDisplay (){
+//      this.studentService.getQuestions(this.subjectName)
+//      .subscribe(data => {
+//        console.log(data);
+//       this.questions = data
+//      });
+//      console.log(this.questions);
+//    }
 
 }

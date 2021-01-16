@@ -7,8 +7,8 @@
             <td><span>{{question.questionDesc}}</span></td>
         </tr>
         <tr>
-            <td><input type="radio"  name="option" value="1" id="{{question.questionId}}" (change)="radioChange($event)">
-            <span>{{question.option1}}</span></td>
+            <td><input type="radio"  name="option" value="1" id="{{question.questions['option1']}}" (change)="radioChange($event)">
+            <span>{{question.questions['option1']}}</span></td>
         </tr>
         <tr>
             <td><input type="radio"  name="option" value="2" id="{{question.questionId}}" (change)="radioChange($event)">
