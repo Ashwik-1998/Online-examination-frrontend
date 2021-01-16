@@ -1,25 +1,65 @@
-<p>REGISTER FOR ONLINE EXAM SYSTEM PORTAL</p>
-
-<p> Please provide us with the following details:</p>
-<form (ngSubmit)="register()">
-
-    Full Name: <input type="text" name="t1" [(ngModel)]=student.fullName /><br />
-
-    Email: <input type="email" name="t2" [(ngModel)]=student.email /><br />
-
-    Mobile : <input type="number" name="t3" [(ngModel)]=student.mobile /><br />
-
-    City : <input type="text" name="t4" [(ngModel)]=student.city /><br />
-
-    Date Of Birth: <input type="date" name="t5" [(ngModel)]=student.dateOfBirth /><br />
-
-    State: <input type="text" name="t6" [(ngModel)]=student.state /><br />
-
-    Qualification: <input type="text" name="t7" [(ngModel)]=student.qualification /><br />
-
-    Year of Completion: <input type="number" name="t8" [(ngModel)]=student.yearOfCompletion /><br />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-    <button type="submit">Register</button>
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3"><b>Registration</b></h2>
+                        <p></p>
 
-</form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4"><b>Please fill with your details</b></h4>
+                <form  (ngSubmit)="register()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input id="Full Name" placeholder="Full Name" class="form-control" type="text" name="t1" [(ngModel)]=student.fullName >
+                        </div>
+                        <div class="form-group col-md-6">
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="t2" [(ngModel)]=student.email>
+                        </div>
+                      </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input id="Mobile No."  placeholder="Mobile No." class="form-control" required="required" type="text" name="t3" [(ngModel)]=student.mobile>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="City"  placeholder="City" class="form-control" required="required" type="text" name="t4" [(ngModel)]=student.city >      
+                                
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="Date Of Birth"  placeholder="Date Of Birth" class="form-control" required="required" type="date" name="t5" [(ngModel)]=student.dateOfBirth  >      
+                                
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="State"  placeholder="State" class="form-control" required="required" type="text" name="t6" [(ngModel)]=student.state >      
+                                
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="Qualification"  placeholder="Qualification" class="form-control" required="required" type="text" name="t7" [(ngModel)]=student.qualification>      
+                                
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="Year of Completion"  placeholder="Year of Completion" class="form-control" required="required" type="text" name="t8" [(ngModel)]=student.yearOfCompletion>      
+                                
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-danger">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
