@@ -23,7 +23,7 @@ export class QuestionPaperComponent implements OnInit {
   selectedQuesid:string;
   userId : string;
 
-  minutes: number = 59;
+  minutes: number = 20;
   seconds: number = 59;
   interval;
   //reportCard : ReportCard;

@@ -7,23 +7,27 @@ import { Observable } from 'rxjs';
 })
 export class ExamServiceService {
 
+  reportId : number;
 
   constructor(private http: HttpClient) { }
 
   sendResponse(questionId: number, optionChosen : number) {
-    let url = "http://localhost:8081/response?questionId="+ questionId + "&optionChosen="+ optionChosen;
+    this.reportId = Number(sessionStorage.getItem('reportId'));
+
+    let url = "http://localhost:8081/response?questionId="+ questionId + "&optionChosen="+ optionChosen + "&reportId="+this.reportId;
     return this.http.get(url);
   }
 
   scoreCalculation(questionId: number, optionChosen : number) {
-    let url = "http://localhost:8081/submitresponse?questionId="+ questionId + "&optionChosen="+ optionChosen;
+    this.reportId = Number(sessionStorage.getItem('reportId'));
+    let url = "http://localhost:8081/submitresponse?questionId="+ questionId + "&optionChosen="+ optionChosen + "&reportId="+this.reportId;
     return this.http.get(url);
   }
 
 
   generateReport(userId : number) : Observable<any> {
-   // userId = 4;
-    let url = "http://localhost:8081/generatereport?userId="+userId;
+    this.reportId = Number(sessionStorage.getItem('reportId'));
+    let url = "http://localhost:8081/generatereport?userId="+userId+ "&reportId="+this.reportId;
     return this.http.get<any>(url);
   }
 
