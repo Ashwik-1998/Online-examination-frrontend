@@ -1,0 +1,33 @@
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Question Id</th>
+          <th>Subject Name</th>
+          <th>Question Desc</th>
+          <th>option1</th>
+          <th>option2</th>
+          <th>option3</th>
+          <th>option4</th>
+          <th>Correct Answer</th>
+          <th>Test Level</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let q of questions">
+                <td>{{q.questionId}}</td>
+                <td>{{q.subjectName}}</td>
+                <td>{{q.questionDesc}}</td>
+                <td>{{q.option1}}</td>
+                <td>{{q.option2}}</td>
+                <td>{{q.option3}}</td>
+                <td>{{q.option4}}</td>
+                <td>{{q.correctAnswer}}</td>
+                <td>{{q.testLevel}}</td>
+                <td><button class="btn btn-danger" (click)="updateQuestion(q.questionId)"> Update</button></td>
+
+                </tr>
+        </tbody>
+          </table>
+      
+         </div>

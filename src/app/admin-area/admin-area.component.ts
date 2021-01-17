@@ -33,4 +33,9 @@ export class AdminAreaComponent implements OnInit {
     this.router.navigateByUrl('/searchstudent');
   }
 
+  viewQuestion=function()
+  {
+    this.router.navigateByUrl('/viewquestion');
+  }
+
 }

@@ -37,6 +37,10 @@ export class UserLoginComponent  {
 
   }
 
+  forgotPassword(){
+    this.router.navigate(['resetpassword']);
+  }
+
   }
 
 export class Login{

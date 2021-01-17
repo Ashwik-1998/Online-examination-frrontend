@@ -17,6 +17,9 @@ import { StartExamComponent } from './start-exam/start-exam.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserReportComponent } from './user-report/user-report.component';
 import { ViewReportComponent } from './view-report/view-report.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ViewQuestionComponent } from './view-question/view-question.component';
+import { UpdateQuestionComponent } from './update-question/update-question.component';
 
 const routes: Routes = [
 
@@ -37,7 +40,10 @@ const routes: Routes = [
   {path:'removequestion',component:RemoveQuestionComponent},
   {path:'aboutus', component: AboutUsComponent},
   {path: 'dashboard', component:DashboardComponent},
-  {path: 'userreport', component:UserReportComponent}
+  {path: 'userreport', component:UserReportComponent},
+  {path: 'resetpassword', component:ResetPasswordComponent},
+  {path:'viewquestion',component:ViewQuestionComponent},
+  {path:'updatequestion/:questionId',component:UpdateQuestionComponent}
 
 ];
 

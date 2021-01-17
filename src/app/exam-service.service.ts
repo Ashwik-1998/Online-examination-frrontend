@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ViewQuestion } from './view-question/view-question.component';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,25 @@ export class ExamServiceService {
   deleteQuestion(subjectName : string , testLevel :number) {
     let url = "http://localhost:8081/removequestion?subjectName="+ subjectName + "&testLevel="+ testLevel;
       return this.http.get(url);
+    }
+
+
+    viewQuestions()
+    {
+      let url = "http://localhost:8081/viewQuestion";
+      
+      return this.http.get<ViewQuestion[]>(url);
+    }
+
+    getQuestionById(questionId :  number)
+    {
+      let url = "http://localhost:8081/getquestion?questionId="+questionId;
+      return this.http.get(url);
+    }
+
+    updateQuestion(questionId : number , question : ViewQuestion)
+    {
+      let url = "http://localhost:8081/updatequestion?questionId="+questionId ;
+      return this.http.post(url,question);
     }
 }

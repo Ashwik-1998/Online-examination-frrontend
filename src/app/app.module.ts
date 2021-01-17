@@ -22,11 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentService } from './student.service';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
-//import { ResponseResetpasswordComponent } from './response-resetpassword/response-resetpassword.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DisplayStudentComponent } from './display-student/display-student.component';
 import { SearchPipe } from './search.pipe';
 import { UserReportComponent } from './user-report/user-report.component';
+import { UpdateQuestionComponent } from './update-question/update-question.component';
+import { ViewQuestionComponent } from './view-question/view-question.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,9 @@ import { UserReportComponent } from './user-report/user-report.component';
     AdminAreaComponent,
     DisplayStudentComponent,
     SearchPipe,
-    UserReportComponent
+    UserReportComponent,
+    UpdateQuestionComponent,
+    ViewQuestionComponent
    //ResponseResetpasswordComponent
   ],
   imports: [

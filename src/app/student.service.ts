@@ -34,9 +34,9 @@ export class StudentService {
     return this.http.post(url,adminlogin);
   }
 
-  forgotPassword(body):Observable<any>{
-    let url="http://localhost:8081/changepassword";
-    return this.http.post(url,body)
+  forgotPassword(email :string){
+    let url="http://localhost:8081/changepassword?email="+email;
+    return this.http.get(url)
   
   }
   requestReset(body):Observable<any>{
