@@ -2,28 +2,28 @@
 
 <h2>Questions</h2>  <p>{{minutes}} : {{seconds}} Left....</p>
 <table>
-    <tbody *ngFor = "let question of questionsList | paginate:{itemsPerPage:5,currentPage:p};">
+    <tbody *ngFor = "let question of questionsList | paginate:{itemsPerPage:1,currentPage:p};">
         <tr>
             <td><span>{{question.questionDesc}}</span></td>
         </tr>
         <tr>
-            <td><input type="radio"  name="{{question.questionId}}" value="1" id="{{question.questionId}}" (change)="radioChange($event)">
+            <td><input type="radio"  name="option" value="1" id="{{question.questionId}}" (change)="radioChange($event)">
             <span>{{question.option1}}</span></td>
         </tr>
         <tr>
-            <td><input type="radio"  name="{{question.questionId}}" value="2" id="{{question.questionId}}" (change)="radioChange($event)">
+            <td><input type="radio"  name="option" value="2" id="{{question.questionId}}" (change)="radioChange($event)">
             <span>{{question.option2}}</span></td>
         </tr>
         <tr>
-            <td><input type="radio"  name="{{question.questionId}}" value="3" id="{{question.questionId}}" (change)="radioChange($event)">
+            <td><input type="radio"  name="option" value="3" id="{{question.questionId}}" (change)="radioChange($event)">
             <span>{{question.option3}}</span></td>
         </tr>
         <tr>
-            <td><input type="radio"  name="{{question.questionId}}" value="4" id="{{question.questionId}}" (change)="radioChange($event)">
+            <td><input type="radio"  name="option" value="4" id="{{question.questionId}}" (change)="radioChange($event)">
                 <span>{{question.option4}}</span></td>
         </tr>
         <tr>
-            <td><input type="button" id="btn" value="submit answer" name="{{question.questionId}}" (click)="onSubmitAnswer($event)"></td>
+            <td><input type="button" id="btn" value="submit answer" name="{{question.questionId}}" (click)="onSubmitAnswer()"></td>
         </tr>
     </tbody>
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
