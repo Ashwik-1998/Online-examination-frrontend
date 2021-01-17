@@ -3,7 +3,6 @@
     <h2>Reports</h2>
     <p>Generated Reports of the users</p>
     <input type="text" name="searchtermsubj" placeholder="search Subject" [(ngModel)]="searchtermsubj">
-    <input type="text" name="searchtermtestlevel" placeholder="search TestLevel" [(ngModel)]="searchtermtestlevel">
     <input type="text" name="searchtermstate" placeholder="search state" [(ngModel)]="searchtermstate">
     <input type="text" name="searchtermcity" placeholder="search city" [(ngModel)]="searchtermcity">
     <input type="text" name="searchname" placeholder="search Name" [(ngModel)]="searchname">
@@ -23,7 +22,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor= "let reports of testReport | search:searchtermsubj:searchtermtestlevel:searchtermstate:searchtermcity:searchname">
+            <tr *ngFor= "let reports of testReport | search:searchtermsubj:searchtermstate:searchtermcity:searchname">
                 <td><span>{{reports.reportId}}</span></td>
                 <td><span>{{reports.score}}</span></td>
                 <td><span>{{reports.testLevel}}</span></td>

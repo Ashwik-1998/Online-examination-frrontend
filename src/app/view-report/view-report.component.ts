@@ -26,7 +26,6 @@ export class ViewReportComponent implements OnInit {
   p:number=1;
   userId : string;
   searchtermSubject:string;
-  searchtermtestlevel:string;
   searchtermstate:string;
   searchtermcity:string;
   searchname:string;
