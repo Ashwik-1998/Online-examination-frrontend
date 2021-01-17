@@ -18,6 +18,7 @@ export class SelectExamComponent implements OnInit {
  public questions : IQuestion[] = [];
  isSubmitted  =  false;
  userId: string;
+ maxLevel : number ;
  
   name: string;
   constructor(private router: Router, private studentService: StudentService, private elementRef: ElementRef) { }
@@ -36,7 +37,7 @@ export class SelectExamComponent implements OnInit {
 
     sessionStorage.setItem('subject', this.subjectName);
 
-   // this.questionDisplay();
+    this.maxLevelCleared();
 
     this.elementRef.nativeElement.remove();
 
@@ -44,13 +45,14 @@ export class SelectExamComponent implements OnInit {
 }
 
 
-//  questionDisplay (){
-//      this.studentService.getQuestions(this.subjectName)
-//      .subscribe(data => {
-//        console.log(data);
-//       this.questions = data
-//      });
-//      console.log(this.questions);
-//    }
+ maxLevelCleared (){
+     this.studentService.maxLevelCrossed(Number(sessionStorage.getItem('userId')), sessionStorage.getItem('subject'))
+     .subscribe(data => {
+      console.log(data);
+      this.maxLevel  = data;
+      alert("You have cleared "+ this.maxLevel + "Level of "+ sessionStorage.getItem('subject'));
+      alert("You are eligible for giving "+ (this.maxLevel+1) + " Level of "+ sessionStorage.getItem('subject'));
+     });
+   }
 
 }

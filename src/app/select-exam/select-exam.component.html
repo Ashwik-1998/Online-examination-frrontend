@@ -1,25 +1,24 @@
 <h3> Select Exam</h3>
 
-<!--<input  type="button" value="JAVA" [(ngModel)] = "Java.value" (click)= "selectExam($event.target.value)">
-<app-start-exam [sbjName]="subjectName"></app-start-exam>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<input  type="button" value="SQL" [(ngModel)] = "SQL.value" (click)= "selectExam(ref.value)" #ref>
-
-<input  type="button" value="PHP" [(ngModel)] = "PHP.value" (click)= "selectExam($event.target.value)"> 
-
-<input  type="button" value="C" [(ngModel)] = "C.value" (click)= "selectExam($event.target.value)">
-
-<input  type="button" value="Python" [(ngModel)] = "Python.value" (click)= "selectExam($event.target.value)">
-
-<input  type="button" value="Csharp" [(ngModel)] = "Csharp.value" (click)= "selectExam($event.target.value)">
--->
-<input type="button" value="JAVA" (click)="selectExam(ref.value)" #ref>
-<input type="button" value="SQL" (click)="selectExam(ref1.value)" #ref1>
-<input type="button" value="PYTHON" (click)="selectExam(ref2.value)" #ref2>
-<input type="button" value="PHP" (click)="selectExam(ref3.value)" #ref3>
-<input type="button" value="c" (click)="selectExam(ref4.value)" #ref4>
-<input type="button" value="csharp" (click)="selectExam(ref5.value)" #ref5>
-
-<!-- <app-start-exam> </app-start-exam> -->
-<!-- <app-question-paper [questionsList]="questions"></app-question-paper> -->
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default modal-dialog">
+            <div class="panel-body">
+                <button class="btn btn-success" value="JAVA" (click)="selectExam(ref.value)" #ref>JAVA</button>
+                <button class="btn btn-warning"  value="SQL" (click)="selectExam(ref1.value)" #ref1>SQL</button>
+                <button class="btn btn-danger"  value="PYTHON"  (click)="selectExam(ref2.value)" #ref2>PYTHON</button>
+                <button class="btn btn-magick" value="PHP" (click)="selectExam(ref3.value)" #ref3>PHP</button>
+                <button class="btn btn-primary" value="c" (click)="selectExam(ref4.value)" #ref4>C</button>
+                <button class="btn btn-warning" value="csharp" (click)="selectExam(ref5.value)" #ref5>C Sharp</button>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

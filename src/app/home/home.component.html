@@ -29,10 +29,11 @@
             <button type="button" class="btn btn-primary" (click)="aboutUs()"><b>AboutUs</b></button>
 
             
-            <button type="button" class="btn btn-success" (click)="userLogin()"><b>Login</b></button>
+            <button type="button" class="btn btn-success" (click)="userLogin()" *ngIf="!loginFlag"><b>Login</b></button>
 
+            <button type="button" class="btn btn-success" (click)="userLogout()" *ngIf="loginFlag"><b>Logout</b></button>
             
-            <button type="button" class="btn btn-info" (click)="userRegister()"><b>Register</b></button>
+            <button type="button" class="btn btn-info" (click)="userRegister()" *ngIf="!loginFlag"><b>Register</b></button>
  
 <hr>
 <div class="exam">

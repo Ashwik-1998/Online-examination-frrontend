@@ -26,6 +26,7 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DisplayStudentComponent } from './display-student/display-student.component';
 import { SearchPipe } from './search.pipe';
+import { UserReportComponent } from './user-report/user-report.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SearchPipe } from './search.pipe';
     QuestionPaperComponent,
     AdminAreaComponent,
     DisplayStudentComponent,
-    SearchPipe
+    SearchPipe,
+    UserReportComponent
    //ResponseResetpasswordComponent
   ],
   imports: [

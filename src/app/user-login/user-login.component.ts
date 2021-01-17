@@ -25,7 +25,9 @@ export class UserLoginComponent  {
       if(response.status == "SUCCESS"){
         let userId = response.userId;
         sessionStorage.setItem('userId', String(userId));
-        this.router.navigate(['selectexam']);
+        this.router.navigate(['home']);
+
+        sessionStorage.setItem('logged', "true");
 
       }
 

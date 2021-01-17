@@ -8,35 +8,57 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  loginFlag: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.loginFlag = Boolean(sessionStorage.getItem('logged'));
   }
-  userLogin= function () {
-    this.router.navigateByUrl('/user-login');
-}
-userRegister= function () {
-  this.router.navigateByUrl('/register');
-}
-report= function () {
-  this.router.navigateByUrl('/');
-}
-newExam= function () {
 
-  if(sessionStorage.getItem('userId')==null){
-    alert("Please login before selecting exam");
+  userLogin = function () {
+    this.loginFlag = Boolean(sessionStorage.getItem('logged'));
     this.router.navigateByUrl('/user-login');
   }
 
-  else{
-  this.router.navigateByUrl('/selectexam');
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
   }
-}
 
-home(){
-  this.router.navigateByUrl('/home');
-}
-aboutUs(){
-  this.router.navigateByUrl('/aboutus');
-}
+  userRegister = function () {
+    this.router.navigateByUrl('/register');
+  }
+
+
+  report = function () {
+
+    if (sessionStorage.getItem('userId') == null) {
+      alert("Please login before seeing your reports");
+      this.router.navigateByUrl('/user-login');
+    }
+
+    else {
+      this.router.navigateByUrl('/userreport');
+    }
+  }
+
+  newExam = function () {
+
+    if (sessionStorage.getItem('userId') == null) {
+      alert("Please login before selecting exam");
+      this.router.navigateByUrl('/user-login');
+    }
+
+    else {
+      this.router.navigateByUrl('/selectexam');
+    }
+  }
+
+  home() {
+    this.router.navigateByUrl('/home');
+  }
+  aboutUs() {
+    this.router.navigateByUrl('/aboutus');
+  }
 }

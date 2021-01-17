@@ -67,5 +67,21 @@ export class StudentService {
       let url="http://localhost:8081/searchstudent?score="+getstudents.score+"&testLevel="+getstudents.testLevel+"&testSubjectName="+getstudents.testSubjectName+"&city="+getstudents.city+"&state="+getstudents.state;
       return this.http.get(url);
     }
+
+
+    fetchUserReport(userId : number): Observable<any>{
+
+      let url = "http://localhost:8081/fetchreport?userId="+userId;
+
+      return this.http.get(url);
+    }
+
+
+    maxLevelCrossed(userId : number, subjectName : string): Observable<any>{
+
+      let url = "http://localhost:8081/maxlevel?userId="+userId+"&subjectName="+subjectName;
+
+      return this.http.get(url);
+    }
    
 }

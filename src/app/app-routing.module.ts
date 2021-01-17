@@ -15,6 +15,7 @@ import { SearchStudentComponent } from './search-student/search-student.componen
 import { SelectExamComponent } from './select-exam/select-exam.component';
 import { StartExamComponent } from './start-exam/start-exam.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserReportComponent } from './user-report/user-report.component';
 import { ViewReportComponent } from './view-report/view-report.component';
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path:'generatereport',component: GenerateReportComponent},
   {path:'removequestion',component:RemoveQuestionComponent},
   {path:'aboutus', component: AboutUsComponent},
-  {path: 'dashboard', component:DashboardComponent}
+  {path: 'dashboard', component:DashboardComponent},
+  {path: 'userreport', component:UserReportComponent}
 
 ];
 

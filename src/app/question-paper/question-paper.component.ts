@@ -16,6 +16,7 @@ export class QuestionPaperComponent implements OnInit {
   //@Input() public questionsList = [];
 
   public questionsList : IQuestion[] = [];
+  //public randomQuestionsList : IQuestion[] = [];
   reportId : number;
 
   p:number=1;
@@ -46,7 +47,14 @@ export class QuestionPaperComponent implements OnInit {
     console.log(this.questionsList);
 
 
+    // randomization of questions
+    // for (var i = 0; i < 6; i++) {
+    //     var rand = this.questionsList[Math.floor(Math.random() * this.questionsList.length)];
+    //     this.randomQuestionsList.push(rand);
+    //   }
 
+
+    // timer functionality
     this.interval = setInterval(() => {
 
       if(this.minutes>0 || this.seconds>0){
@@ -68,10 +76,11 @@ export class QuestionPaperComponent implements OnInit {
     this.selectedOption=event.target.value;
     this.selectedQuesid=event.target.id;
   }
-  onSubmitAnswer(){
+  onSubmitAnswer(event : any){
     // alert(this.selectedOption);
     // alert(this.selectedQuesid); 
 
+    event.target.disabled = true;
     this.examService.sendResponse(Number(this.selectedQuesid) , Number(this.selectedOption)).subscribe(
 
       data => { 

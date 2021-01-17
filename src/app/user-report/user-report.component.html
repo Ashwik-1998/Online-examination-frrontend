@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Subject Name</th>
+            <th>Level</th>
+            <th>Your Score</th>
+            <th>date and time</th>     
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let reports of userReport">
+            <td><span>{{reports.testSubjectName}}</span></td>
+            <td><span>{{reports.testLevel}}</span></td>
+            <td><span>{{reports.score}}</span></td>
+            <td><span>{{reports.dateAndTime}}</span></td>
+        </tr>
+    </tbody>
+</table>
