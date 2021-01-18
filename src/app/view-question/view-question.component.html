@@ -1,6 +1,6 @@
-
 <div align="right"><button type="button" class="btn btn-danger" (click)="userLogout()" ><b>Logout</b></button></div>
-
+<input type="text" name="searchtermsubj" placeholder="search Subject" [(ngModel)]="searchtermsubj">
+<input type="text" name="searchtermdesc" placeholder="Question Description" [(ngModel)]="searchtermdesc">
 
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
          <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
@@ -25,7 +25,7 @@
                            </tr>
                        </thead>   
                        <tbody>
-                         <tr *ngFor="let q of questions">
+                         <tr *ngFor="let q of questions | questionsearch:searchtermsubj:searchtermdesc">
                              <td>{{q.questionId}}</td>
                              <td>{{q.subjectName}}</td>
                              <td>{{q.questionDesc}}</td>

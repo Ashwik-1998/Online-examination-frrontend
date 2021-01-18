@@ -14,6 +14,8 @@ import { ExamServiceService } from '../exam-service.service';
 export class ViewQuestionComponent implements OnInit{
 
   questions: ViewQuestion[];
+  searchtermSubject:string;
+  searchtermdesc:string;
  // questionId :number;
  //viewQuestion : ViewQuestion;
 

@@ -29,7 +29,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor= "let reports of testReport | search:searchtermsubj:searchtermstate:searchtermcity:searchname">
+            <tr *ngFor= "let reports of testReport | search:searchtermsubj:searchtermstate:searchtermcity:searchname | paginate:{itemsPerPage:15,currentPage:p};">
                 <td><span>{{reports.reportId}}</span></td>
                 <td><span>{{reports.score}}</span></td>
                 <td><span>{{reports.testLevel}}</span></td>

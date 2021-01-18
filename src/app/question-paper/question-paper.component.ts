@@ -97,7 +97,12 @@ export class QuestionPaperComponent implements OnInit {
           this.reportCard.score = data.score;
           this.reportCard.testLevel = data.testLevel;
           this.reportCard.subjectName = data.testSubjectName;
+          
+          if(this.reportCard.score >=15)
+          alert("Congratulations!!! You have Successfully Cleared this test...")
 
+          else
+          alert("Sorry! You have scored below the passing criteria...try again")
          // this.reportCard = data;
           console.log(this.reportCard);
 

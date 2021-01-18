@@ -28,6 +28,7 @@ import { SearchPipe } from './search.pipe';
 import { UserReportComponent } from './user-report/user-report.component';
 import { UpdateQuestionComponent } from './update-question/update-question.component';
 import { ViewQuestionComponent } from './view-question/view-question.component';
+import { QuestionsearchPipe } from './questionsearch.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ViewQuestionComponent } from './view-question/view-question.component';
     SearchPipe,
     UserReportComponent,
     UpdateQuestionComponent,
-    ViewQuestionComponent
+    ViewQuestionComponent,
+    QuestionsearchPipe
    //ResponseResetpasswordComponent
   ],
   imports: [

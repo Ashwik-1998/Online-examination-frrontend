@@ -50,7 +50,7 @@ export class SelectExamComponent implements OnInit {
      .subscribe(data => {
       console.log(data);
       this.maxLevel  = data;
-      alert("You have cleared "+ this.maxLevel + "Level of "+ sessionStorage.getItem('subject'));
+      alert("You have cleared "+ this.maxLevel + " Level of "+ sessionStorage.getItem('subject'));
       alert("You are eligible for giving "+ (this.maxLevel+1) + " Level of "+ sessionStorage.getItem('subject'));
      });
    }
