@@ -36,9 +36,10 @@ export class ViewQuestionComponent implements OnInit{
   }
 
   
-
-
-
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
 
 }  
 

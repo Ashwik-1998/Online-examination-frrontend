@@ -1,4 +1,4 @@
-<div class="split left">
+<!--div class="split left">
     <div class="centered">
         <h2>Thank You for taking the test</h2>
         <input type="button" value="Go to Exam " (click)="goToExam()">
@@ -30,4 +30,50 @@
       </table>
       <input type="button" value="Log out" (click)="logOut()">
     </div>
-  </div>
+  </div>-->
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-xs-12 col-md-6">
+	        <div class="bg bg-left">
+            <h2><b>Thank You for taking the test</b></h2>
+            <br>
+            <br>
+            <br>
+
+                <input type="button" value="Go to Exam " (click)="goToExam()">
+	        </div>
+	    </div>
+	    <div class="col-xs-12 col-md-6">
+            <div class="bg bg-right">
+                <table>
+                    <thead><tr>Report of your Latest Exam</tr></thead>
+                    <tbody>
+                        <tr>
+                          <th>Name: </th>
+                          <td>{{reportCard.name}}</td>
+                        </tr>
+                        <tr>
+                          <th>Score:</th>
+                          <td>{{reportCard.score}}</td>
+                      </tr>
+                      <tr>
+                          <th>Level:</th>
+                          <td>{{reportCard.testLevel}}</td>
+                      </tr>
+                      <tr>
+                          <th>Test:</th>
+                          <td>{{reportCard.subjectName}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <input type="button" value="Log out" (click)="logOut()">
+	        </div>
+	    </div>
+	</div>
+</div>

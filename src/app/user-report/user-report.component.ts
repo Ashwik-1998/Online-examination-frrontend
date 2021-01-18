@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { StudentService } from '../student.service';
 export class UserReportComponent implements OnInit {
 
   public userReport = [];
+  loginFlag: boolean = false;
 
-  constructor(private studentService : StudentService) { }
+  constructor(private studentService : StudentService,private router:Router) { }
 
   ngOnInit() {
 
@@ -23,6 +25,10 @@ export class UserReportComponent implements OnInit {
       console.log(this.userReport);
     });
 
+  }
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
   }
 
 }

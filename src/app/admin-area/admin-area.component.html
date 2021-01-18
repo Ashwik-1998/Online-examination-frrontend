@@ -1,4 +1,4 @@
-<h3>Welcome to the admin section</h3>
+<!--<h3>Welcome to the admin section</h3>
 
 
 
@@ -11,6 +11,41 @@
 
 <button type="button" class="button" (click)="searchStudent()">Search Student</button><br>
 
-<button type="button" class="button" (click)="viewQuestion()">View Question</button><br>
+<button type="button" class="button" (click)="viewQuestion()">View Question</button><br>-->
+
+<div align="right"><button type="button" class="btn btn-danger" (click)="userLogout()" ><b>Logout</b></button></div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div style="margin-top: 50px;margin-bottom: 50px;" class="container">
+   <h3><b>Welcome to the admin section</b></h3>
+    <br />
+    <br />
+	<div class="row">
+      <div class="col-md-4">
+    	<p>
+  <button type="button" class="btn btn-primary" (click)="addQuestion()" >Add Question</button>
+ 
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="removeQuestion()" >Remove Question</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="viewReport()" >View Report</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="addQuestionFile()" >Choose file</button>
+</p>
+<p>
+    <button type="button" class="btn btn-primary" (click)="viewQuestion()">View Question</button>
+</p>
+	
+	</div>
+    
+    </div>
+</div>
 
 <router-outlet></router-outlet>

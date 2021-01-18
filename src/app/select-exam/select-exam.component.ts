@@ -54,5 +54,9 @@ export class SelectExamComponent implements OnInit {
       alert("You are eligible for giving "+ (this.maxLevel+1) + " Level of "+ sessionStorage.getItem('subject'));
      });
    }
+   userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
 
 }

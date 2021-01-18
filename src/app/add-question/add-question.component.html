@@ -1,4 +1,4 @@
-<form (ngSubmit)="saveQuestion()">
+<!--<form (ngSubmit)="saveQuestion()">
     Subject Name:<input type="text"  [(ngModel)]="question.subjectName" name="subject"><br>
     Test Level:<input type="number"  [(ngModel)]="question.testLevel" name="test"><br>
     Enter Question to be added : <input type="text"  [(ngModel)]="question.questionDesc" name="question"><br>
@@ -9,4 +9,50 @@
     Correct Option :<input type="text" name="correct" [(ngModel)]="question.correctAnswer"><br>
     <button type="submit">Add</button>
     
-   </form>
+   </form>-->
+
+   <div align="right"><button type="button" class="btn btn-danger" (click)="userLogout()" ><b>Logout</b></button></div>
+
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<h3><b>Add Questions</b></h3>
+
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+        
+<form (ngSubmit)="saveQuestion()">
+    <div class="form-group">
+       <label>Subject Name:</label>
+       <input type="text" class="form-control"  placeholder="Subject Name" [(ngModel)]="question.subjectName" name="subject">
+    </div>
+    <div class="form-group">
+       <label> Test Level:</label>
+       <input type="text" class="form-control"  placeholder="Test Level" [(ngModel)]="question.testLevel" name="test">
+    </div>
+    <div class="form-group">
+        <label> Enter Question to be added :</label>
+        <input type="text" class="form-control"   placeholder="Question" [(ngModel)]="question.questionDesc" name="question">
+     </div>
+     <div class="form-group">
+        <input type="text" class="form-control"   placeholder="Option 1"  name="option1" [(ngModel)]="question.option1">
+     </div>
+     <div class="form-group">
+        <input type="text" class="form-control"   placeholder="Option 2"  name="option2" [(ngModel)]="question.option2">
+     </div>
+     <div class="form-group">
+        <input type="text" class="form-control"   placeholder="Option 3"   name="option3" [(ngModel)]="question.option3">
+     </div>
+     <div class="form-group">
+        <input type="text" class="form-control"   placeholder="Option 4"   name="option4" [(ngModel)]="question.option4">
+     </div>
+     <div class="form-group">
+        <label> Correct Option :</label>
+        <input type="text" class="form-control"   placeholder="Correct option"  name="correct" [(ngModel)]="question.correctAnswer">
+     </div>
+    <button type="submit" class="btn btn-black">Add</button>
+ </form>
+</div>
+</div>
+</div>

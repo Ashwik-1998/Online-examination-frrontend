@@ -38,6 +38,12 @@ export class RemoveQuestionComponent implements OnInit {
   {
     console.log(this.question);
   }
+
+
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
     
 }
 

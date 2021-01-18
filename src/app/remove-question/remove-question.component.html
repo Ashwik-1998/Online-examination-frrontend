@@ -1,3 +1,30 @@
-Enter subject name :<input type="text" name="t1" [(ngModel)]=question.subjectName><br>
+<!--Enter subject name :<input type="text" name="t1" [(ngModel)]=question.subjectName><br>
     Enter Test Level:<input type="number" name="t2" [(ngModel)]=question.testLevel><br>
-    <input type="button" value="Delete" (click)="removeCheck()">
+    <input type="button" value="Delete" (click)="removeCheck()">-->
+
+
+    <div align="right"><button type="button" class="btn btn-danger" (click)="userLogout()" ><b>Logout</b></button></div>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <h3><b>Remove Question</b></h3>
+    
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+           <div class="login-form">
+           
+    <form (ngSubmit)="loginCheck()">
+        <div class="form-group">
+           <label>Enter subject name</label>
+           <input type="text" class="form-control"  placeholder="Subject Name" name="t1" [(ngModel)]=question.subjectName>
+        </div>
+        <div class="form-group">
+           <label> Enter Test Level</label>
+           <input type="number" class="form-control"  placeholder="Test Level" name="t2" [(ngModel)]=question.testLevel>
+        </div>
+        <button type="submit" class="btn btn-black" value="Delete" (click)="removeCheck()">Delete</button>
+     </form>
+    </div>
+    </div>
+    </div>

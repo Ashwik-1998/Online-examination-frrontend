@@ -40,6 +40,12 @@ export class AddQuestionComponent implements OnInit {
   {
     console.log(this.question);
   }
+
+
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
     
 
 }

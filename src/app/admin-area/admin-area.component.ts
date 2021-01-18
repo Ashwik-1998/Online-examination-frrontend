@@ -38,4 +38,9 @@ export class AdminAreaComponent implements OnInit {
     this.router.navigateByUrl('/viewquestion');
   }
 
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
+
 }

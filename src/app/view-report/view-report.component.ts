@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
 
@@ -31,7 +32,7 @@ export class ViewReportComponent implements OnInit {
   searchname:string;
   data=[];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, private router : Router) { }
 
   ngOnInit():void {
 
@@ -54,7 +55,10 @@ export class ViewReportComponent implements OnInit {
   }
   
 
-
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
   
  
     

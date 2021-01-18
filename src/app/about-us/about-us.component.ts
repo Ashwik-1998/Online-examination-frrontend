@@ -12,4 +12,9 @@ export class AboutUsComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  userLogout = function () {
+    sessionStorage.clear();
+    this.router.navigateByUrl('/dashboard');
+  }
 }
