@@ -24,6 +24,7 @@ export class UserLoginComponent  {
 
       if(response.status == "SUCCESS"){
         let userId = response.userId;
+        sessionStorage.setItem('profileName', response.fullName);
         sessionStorage.setItem('userId', String(userId));
         this.router.navigate(['home']);
 

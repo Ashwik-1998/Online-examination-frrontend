@@ -31,7 +31,7 @@ export class SelectExamComponent implements OnInit {
 
 
   selectExam (subjName: string) {
-    alert(subjName);
+    //alert(subjName);
     this.subjectName = subjName;
     console.log(this.subjectName);
 

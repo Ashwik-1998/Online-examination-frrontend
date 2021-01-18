@@ -19,7 +19,7 @@ export class GenerateReportComponent implements OnInit {
   }
 
   goToExam(){
-    this.router.navigateByUrl('/selectexam');
+    this.router.navigateByUrl('/home');
   }
 
   logOut(){

@@ -112,3 +112,15 @@ a {
 h2{
     font-family:cursive;
 }
+
+
+.profile{
+
+    font-family:cursive;
+    margin-left:500px;
+    margin-top: 20px;
+    color: red;
+
+    font-size: x-large;
+
+}

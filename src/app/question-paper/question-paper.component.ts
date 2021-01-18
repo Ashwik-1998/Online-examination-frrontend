@@ -23,7 +23,7 @@ export class QuestionPaperComponent implements OnInit {
   selectedQuesid:string;
   userId : string;
 
-  minutes: number = 20;
+  minutes: number = 19;
   seconds: number = 59;
   interval;
   //reportCard : ReportCard;
@@ -68,10 +68,10 @@ export class QuestionPaperComponent implements OnInit {
     this.selectedOption=event.target.value;
     this.selectedQuesid=event.target.id;
   }
-  onSubmitAnswer(){
+  onSubmitAnswer(event : any){
     // alert(this.selectedOption);
     // alert(this.selectedQuesid); 
-
+    event.target.disabled = true;
     this.examService.sendResponse(Number(this.selectedQuesid) , Number(this.selectedOption)).subscribe(
 
       data => { 

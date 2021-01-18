@@ -2,27 +2,27 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="sidenav">
+<!-- <div class="sidenav">
          <div class="login-main-text">
-            <h2>Welcome </h2>
+            <h2>Welcome Student</h2>
             <p>Login or register from here to access.</p>
          </div>
-      </div>
+      </div> -->
       <div class="sidenav">
         <div class="login-main-text">
-           <h2><b>Welcome</b></h2>
+           <h2 *ngIf="!loginFlag"><b>Welcome Student</b></h2>
+           <h2 *ngIf="loginFlag">  Welcome , {{this.name}}  </h2> 
            <p>Login or register from here to access.</p>
         </div>
      </div>
+
+     
+
      <div class="main">
         <div class="col-md-6 col-sm-12">
-            
-            
+       
+      
             <button type="button" class="btn btn-default" (click)="home()"><b>Home</b></button>
 
             
@@ -31,11 +31,13 @@
             
             <button type="button" class="btn btn-success" (click)="userLogin()" *ngIf="!loginFlag"><b>Login</b></button>
 
-            <button type="button" class="btn btn-success" (click)="userLogout()" *ngIf="loginFlag"><b>Logout</b></button>
+            <button type="button" class="btn btn-success" (click)="userLogout()" *ngIf="loginFlag" align = "right"><b>Logout</b></button>
             
             <button type="button" class="btn btn-info" (click)="userRegister()" *ngIf="!loginFlag"><b>Register</b></button>
  
 <hr>
+
+
 <div class="exam">
     <button type="button" class="btn btn-warning" (click)="report();"><b>Report</b></button>
     <br>
@@ -43,6 +45,13 @@
     <button type="button" class="btn btn-danger" (click)="newExam();"><b>New Exam</b></button>
 </div>
 </div>
+
+
+
+
 </div>
+
+
+ 
 
 <router-outlet></router-outlet>

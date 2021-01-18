@@ -31,4 +31,9 @@ export class UserReportComponent implements OnInit {
     this.router.navigateByUrl('/dashboard');
   }
 
+  newExam(){
+
+    this.router.navigateByUrl('/selectexam');
+  }
+
 }

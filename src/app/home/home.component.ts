@@ -9,11 +9,17 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   loginFlag: boolean = false;
+  name : string;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
     this.loginFlag = Boolean(sessionStorage.getItem('logged'));
+
+    if(sessionStorage.getItem('logged') == "true")
+    this.name = sessionStorage.getItem('profileName');
+
+    console.log(this.name)
   }
 
   userLogin = function () {
