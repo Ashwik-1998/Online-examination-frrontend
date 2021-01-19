@@ -30,7 +30,7 @@ export class RemoveQuestionComponent implements OnInit {
       
 
     });
-    console.log("questions removed successfully");
+    alert("questions removed successfully");
   };
 
 

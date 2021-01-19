@@ -32,7 +32,7 @@ export class AddQuestionComponent implements OnInit {
   {
     this.studentService.addquestion(this.question).subscribe(data =>{
       console.log(data);
-      console.log("question added successfully");
+      alert("question added successfully");
     });
   };
 
