@@ -13,7 +13,7 @@
         <div class="login-main-text">
            <h2 *ngIf="!loginFlag"><b>Welcome Student</b></h2>
            <h2 *ngIf="loginFlag">  Welcome , {{this.name}}  </h2> 
-           <p>Login or register from here to access.</p>
+           <p *ngIf="!loginFlag">Login or register from here to access.</p>
         </div>
      </div>
 
